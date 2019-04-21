@@ -40,7 +40,7 @@ const BoardList = ({ user, handleAddBoard }) => {
   const [boards, setBoards] = useState([]);
 
   useEffect(() => {
-    if (!user) navigate(`/auth`);
+    if (!user) navigate(`/auth`, { replace: true });
     let boardsFromDB = [];
     const unsubscribe = db
       .collection(`boards`)
