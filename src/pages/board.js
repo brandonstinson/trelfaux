@@ -2,16 +2,16 @@ import React from 'react';
 
 import Layout from '../components/layout/layout';
 import TitleContainer from '../components/layout/titleContainer';
-import BoardList from '../components/boardList';
+import BoardView from '../components/boardView';
 
 import withProvider from '../redux/withProvider';
 
-const BoardListPage = () => (
+const BoardPage = () => (
   <Layout>
     <TitleContainer title="Trelfaux">
-      <BoardList />
+      <BoardView />
     </TitleContainer>
   </Layout>
 );
 
-export default withProvider(BoardListPage);
+export default withProvider(BoardPage);
