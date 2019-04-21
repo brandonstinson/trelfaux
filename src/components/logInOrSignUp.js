@@ -33,7 +33,7 @@ const StyledLogInOrSignUp = styled.div`
 
 const LogInOrSignUp = ({ user, auth, handleLogIn, handleSignUp }) => {
   useEffect(() => {
-    if (user) navigate(`/`);
+    if (user) navigate(`/`, { replace: true });
   }, [user]);
 
   const [isLogIn, setIsLogIn] = useState(true);
