@@ -40,7 +40,7 @@ const BoardView = ({ board, handleAddList }) => {
   const [lists, setLists] = useState([]);
 
   useEffect(() => {
-    if (!board.id) return navigate(`/`);
+    if (!board.id) return navigate(`/`, { replace: true });
     let listsfromDB = [];
     const unsubscribe = db
       .collection(`lists`)
